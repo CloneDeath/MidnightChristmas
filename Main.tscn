@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dd42kcsluukab"]
+[gd_scene load_steps=6 format=3 uid="uid://dd42kcsluukab"]
 
 [ext_resource type="PackedScene" uid="uid://vmuo67dwpmp2" path="res://Santa.tscn" id="1_1wato"]
 [ext_resource type="PackedScene" uid="uid://darw4bkafpt7j" path="res://House/HallGrid.tscn" id="2_afpuh"]
+[ext_resource type="PackedScene" uid="uid://brm1hoyunojgs" path="res://House/Chimney/Chimney.gltf" id="3_nyot4"]
 
 [sub_resource type="Sky" id="Sky_1nn4o"]
 
@@ -19,7 +20,7 @@ fog_light_color = Color(0, 0, 0, 1)
 environment = SubResource("Environment_o8bgs")
 
 [node name="Santa" parent="." instance=ExtResource("1_1wato")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.940894, 0, 0)
 
 [node name="HallGrid" parent="." instance=ExtResource("2_afpuh")]
 data = {
@@ -31,3 +32,6 @@ metadata/_edit_lock_ = true
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 6, 2, 0)
 shadow_enabled = true
 spot_angle = 60.0
+
+[node name="Chimney" parent="." instance=ExtResource("3_nyot4")]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -0.582038, -0.159, 0)
