@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://bgblilimjvhuo"]
+
+[ext_resource type="PackedScene" uid="uid://d1515e5equ65n" path="res://House/Lights/CeilingLight.gltf" id="1_r6088"]
+
+[node name="CeilingLight" type="Node3D"]
+
+[node name="CeilingLight" parent="." instance=ExtResource("1_r6088")]
+
+[node name="LightDown" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 1.8, 0)
+shadow_enabled = true
+spot_range = 14.1927
+
+[node name="LightUp" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 1.5137, 0)
+light_energy = 0.01
+spot_range = 14.1927
