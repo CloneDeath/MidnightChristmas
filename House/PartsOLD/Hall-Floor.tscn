@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://chytbdfwoynbs"]
+
+[ext_resource type="Shader" path="res://psx.gdshader" id="1_joypj"]
+[ext_resource type="Texture2D" uid="uid://byn0g056wxpfe" path="res://Floor.png" id="3_f821l"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4ms4f"]
+render_priority = 0
+shader = ExtResource("1_joypj")
+shader_parameter/affine_texture_mapping = true
+shader_parameter/albedo = ExtResource("3_f821l")
+shader_parameter/alpha_scissor = 1.0
+shader_parameter/jitter = 0.5
+shader_parameter/jitter_depth_independent = true
+shader_parameter/jitter_z_coordinate = true
+
+[sub_resource type="QuadMesh" id="QuadMesh_uqkff"]
+material = SubResource("ShaderMaterial_4ms4f")
+subdivide_width = 1
+subdivide_depth = 1
+orientation = 1
+
+[node name="Hall-Single" type="Node3D"]
+
+[node name="Floor" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.5, 0, 0.5)
+mesh = SubResource("QuadMesh_uqkff")

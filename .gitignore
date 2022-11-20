@@ -1,0 +1,8 @@
+.import/
+.godot/
+.idea/
+.mono/
+obj/
+bin/
+packages/
+*.user

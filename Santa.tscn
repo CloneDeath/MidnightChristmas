@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://vmuo67dwpmp2"]
+
+[ext_resource type="Script" path="res://Santa.cs" id="1_7r2ek"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_o67no"]
+
+[node name="Santa" type="CharacterBody3D"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+script = ExtResource("1_7r2ek")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_o67no")
+
+[node name="Camera" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://darw4bkafpt7j"]
+
+[ext_resource type="MeshLibrary" uid="uid://b71wtyuwrdbr2" path="res://House/HallTiles.tres" id="1_vukuo"]
+
+[node name="HallTiles" type="GridMap"]
+mesh_library = ExtResource("1_vukuo")
+cell_size = Vector3(1, 2, 1)
+data = {
+"cells": PackedInt32Array(2, 65534, 1376256, 1, 65535, 1376256)
+}
