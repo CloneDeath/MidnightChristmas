@@ -4,7 +4,7 @@ namespace MidnightChristmas;
 
 public partial class Santa : CharacterBody3D
 {
-	public const float Speed = 5.0f;
+	public const float Speed = 1.0f;
 	public const float JumpVelocity = 4.5f;
 
 	public float gravity = ProjectSettings.GetSetting("physics/3d/default_gravity").AsSingle();

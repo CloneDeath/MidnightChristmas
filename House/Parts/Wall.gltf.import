@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c5cuc26cfhppg"
+uid="uid://dgnk3oyggrm7i"
 path="res://.godot/imported/Wall.gltf-055923aaaae1105cced84e0794405a69.scn"
 
 [deps]
@@ -28,6 +28,10 @@ animation/fps=30
 import_script/path=""
 _subresources={
 "materials": {
+"Ceiling": {
+"use_external/enabled": true,
+"use_external/path": "res://House/Parts/Ceiling.material"
+},
 "Floor": {
 "use_external/enabled": true,
 "use_external/path": "res://House/Parts/Floor.material"

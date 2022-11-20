@@ -3,6 +3,7 @@
 [ext_resource type="Script" path="res://Santa.cs" id="1_7r2ek"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_o67no"]
+height = 1.7
 
 [node name="Santa" type="CharacterBody3D"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
