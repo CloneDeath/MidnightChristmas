@@ -8,6 +8,8 @@ public partial class LightEnabler : Node3D {
 	[Export] public bool Enabled { get; set; } = true;
 	
 	public override void _Process(double delta) {
+		if (!Enabled) return;
+		
 		var lights = GetLightsInScene()
 			.OrderBy(l => l.GlobalPosition.DistanceTo(GlobalPosition))
 			.ToList();

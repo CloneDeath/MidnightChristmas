@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://vmuo67dwpmp2"]
+[gd_scene load_steps=5 format=3 uid="uid://vmuo67dwpmp2"]
 
 [ext_resource type="Script" path="res://Santa.cs" id="1_7r2ek"]
 [ext_resource type="Script" path="res://LightEnabler.cs" id="2_cqwnu"]
@@ -6,6 +6,8 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_o67no"]
 radius = 0.4
 height = 1.7
+
+[sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_gghec"]
 
 [node name="Santa" type="CharacterBody3D"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
@@ -21,3 +23,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 [node name="LightEnabler" type="Node3D" parent="."]
 script = ExtResource("2_cqwnu")
 Enabled = false
+
+[node name="Interaction" type="Area3D" parent="." groups=["interaction"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Interaction"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 1.5, 0)
+shape = SubResource("SeparationRayShape3D_gghec")

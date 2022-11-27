@@ -11,11 +11,10 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 1.8
 light_bake_mode = 1
 shadow_enabled = true
 shadow_reverse_cull_face = true
-spot_range = 14.1927
+spot_range = 3.0
 
 [node name="LightUp" type="SpotLight3D" parent="." groups=["light"]]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 1.5137, 0)
-visible = false
 light_energy = 0.01
 light_bake_mode = 1
 spot_range = 14.1927

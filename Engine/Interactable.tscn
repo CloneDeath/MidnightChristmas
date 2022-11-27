@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://tqgkj4bx2f7p"]
+
+[ext_resource type="Script" path="res://Engine/Interactable.cs" id="1_t33jw"]
+[ext_resource type="Texture2D" uid="uid://b4uwqie3rt72" path="res://Menu/Buttons/XButton.png" id="2_sr6s7"]
+
+[node name="Interactable" type="Area3D"]
+script = ExtResource("1_t33jw")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="InteractUI" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ButtonTexture" type="TextureRect" parent="CanvasLayer/InteractUI"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 40.0
+grow_vertical = 0
+texture = ExtResource("2_sr6s7")
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="CanvasLayer/InteractUI"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 43.0
+offset_top = -32.0
+offset_right = 2.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "leave presents"

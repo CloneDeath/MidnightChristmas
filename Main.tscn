@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://kg0ab8j66l8m" path="res://Level/Level01.gltf" id="2_xwwfo"]
 [ext_resource type="PackedScene" uid="uid://0oby2b7b86ls" path="res://House/Door/Door.gltf" id="3_8qf26"]
 [ext_resource type="PackedScene" uid="uid://bgblilimjvhuo" path="res://House/Lights/CeilingLight.tscn" id="4_kch46"]
-[ext_resource type="PackedScene" uid="uid://coo6adibwqk4s" path="res://House/Tree/Tree.gltf" id="5_s7f2f"]
 [ext_resource type="PackedScene" uid="uid://bqhjx5fqytkt2" path="res://House/Chimney/Chimney.gltf" id="6_dml30"]
+[ext_resource type="PackedScene" uid="uid://08qa4f0mxxoj" path="res://House/Tree/Tree.tscn" id="7_u88ew"]
 
 [sub_resource type="Sky" id="Sky_1nn4o"]
 
@@ -41,8 +41,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 1)
 
 [node name="CeilingLight" parent="Level01" instance=ExtResource("4_kch46")]
 
-[node name="Tree" parent="Level01" instance=ExtResource("5_s7f2f")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
-
 [node name="Chimney" parent="Level01" instance=ExtResource("6_dml30")]
 transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -1.5, 0, -1.5)
+
+[node name="Tree" parent="Level01" instance=ExtResource("7_u88ew")]
+transform = Transform3D(-0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, 1, 0, -1)

@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://08qa4f0mxxoj"]
+
+[ext_resource type="PackedScene" uid="uid://coo6adibwqk4s" path="res://House/Tree/Tree.gltf" id="1_026fc"]
+[ext_resource type="Script" path="res://House/Tree/Tree.cs" id="1_gtggw"]
+[ext_resource type="PackedScene" uid="uid://tqgkj4bx2f7p" path="res://Engine/Interactable.tscn" id="2_enyud"]
+[ext_resource type="PackedScene" uid="uid://b0kaabf5qvva4" path="res://House/Present/Present.gltf" id="3_bo08s"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4h2lq"]
+size = Vector3(1, 2, 1)
+
+[node name="Tree" type="Node3D"]
+script = ExtResource("1_gtggw")
+
+[node name="Tree" parent="." instance=ExtResource("1_026fc")]
+
+[node name="Interactable" parent="." instance=ExtResource("2_enyud")]
+
+[node name="CollisionBox" type="CollisionShape3D" parent="Interactable"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("BoxShape3D_4h2lq")
+
+[node name="Present" parent="." instance=ExtResource("3_bo08s")]
+transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 0.5, 0, 0)
+visible = false
+
+[connection signal="Interacted" from="Interactable" to="." method="_on_interactable_interacted"]
