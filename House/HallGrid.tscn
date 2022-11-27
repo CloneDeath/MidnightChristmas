@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://darw4bkafpt7j"]
-
-[ext_resource type="MeshLibrary" uid="uid://cwdx8bl7ud051" path="res://House/HallTiles.meshlib" id="1_75dca"]
-
-[node name="HallGrid" type="GridMap"]
-mesh_library = ExtResource("1_75dca")
-cell_size = Vector3(1, 2, 1)
-cell_center_y = false

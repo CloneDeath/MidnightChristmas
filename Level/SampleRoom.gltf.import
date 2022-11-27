@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dgnk3oyggrm7i"
-path="res://.godot/imported/Wall.gltf-055923aaaae1105cced84e0794405a69.scn"
+uid="uid://b58pa131d5kmj"
+path="res://.godot/imported/SampleRoom.gltf-379f793981a8711bbdf5d1d19aa89b4e.scn"
 
 [deps]
 
-source_file="res://House/Parts/Wall.gltf"
-dest_files=["res://.godot/imported/Wall.gltf-055923aaaae1105cced84e0794405a69.scn"]
+source_file="res://Level/SampleRoom.gltf"
+dest_files=["res://.godot/imported/SampleRoom.gltf-379f793981a8711bbdf5d1d19aa89b4e.scn"]
 
 [params]
 
@@ -18,7 +18,7 @@ nodes/root_name="Scene Root"
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
 meshes/ensure_tangents=true
-meshes/generate_lods=false
+meshes/generate_lods=true
 meshes/create_shadow_meshes=true
 meshes/light_baking=1
 meshes/lightmap_texel_size=0.2
@@ -28,21 +28,21 @@ animation/fps=30
 import_script/path=""
 _subresources={
 "materials": {
-"Ceiling": {
+"material_0": {
+"use_external/enabled": true,
+"use_external/path": "res://House/Parts/Wall.material"
+},
+"material_1": {
 "use_external/enabled": true,
 "use_external/path": "res://House/Parts/Ceiling.material"
 },
-"Floor": {
+"material_2": {
 "use_external/enabled": true,
 "use_external/path": "res://House/Parts/Floor.material"
-},
-"Wall": {
-"use_external/enabled": true,
-"use_external/path": "res://House/Parts/Wall.material"
 }
 },
 "nodes": {
-"PATH:Wall2": {
+"PATH:default2": {
 "generate/physics": true,
 "physics/shape_type": 2
 }

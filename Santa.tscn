@@ -1,8 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://vmuo67dwpmp2"]
+[gd_scene load_steps=4 format=3 uid="uid://vmuo67dwpmp2"]
 
 [ext_resource type="Script" path="res://Santa.cs" id="1_7r2ek"]
+[ext_resource type="Script" path="res://LightEnabler.cs" id="2_cqwnu"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_o67no"]
+radius = 0.4
 height = 1.7
 
 [node name="Santa" type="CharacterBody3D"]
@@ -15,3 +17,6 @@ shape = SubResource("CapsuleShape3D_o67no")
 
 [node name="Camera" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+
+[node name="LightEnabler" type="Node3D" parent="."]
+script = ExtResource("2_cqwnu")

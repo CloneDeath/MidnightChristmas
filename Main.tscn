@@ -1,10 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://dd42kcsluukab"]
+[gd_scene load_steps=7 format=3 uid="uid://dsp4vw0awxct3"]
 
 [ext_resource type="PackedScene" uid="uid://vmuo67dwpmp2" path="res://Santa.tscn" id="1_1wato"]
-[ext_resource type="PackedScene" uid="uid://darw4bkafpt7j" path="res://House/HallGrid.tscn" id="2_afpuh"]
-[ext_resource type="PackedScene" uid="uid://bqhjx5fqytkt2" path="res://House/Chimney/Chimney.gltf" id="3_nyot4"]
-[ext_resource type="PackedScene" uid="uid://bgblilimjvhuo" path="res://House/Lights/CeilingLight.tscn" id="4_rn7cb"]
-[ext_resource type="PackedScene" uid="uid://b1kweldyfifda" path="res://House2/SampleRoom.gltf" id="5_ekc7y"]
+[ext_resource type="PackedScene" uid="uid://kg0ab8j66l8m" path="res://Level/Level01.gltf" id="2_xwwfo"]
+[ext_resource type="PackedScene" uid="uid://0oby2b7b86ls" path="res://House/Door/Door.gltf" id="3_8qf26"]
+[ext_resource type="PackedScene" uid="uid://bgblilimjvhuo" path="res://House/Lights/CeilingLight.tscn" id="4_kch46"]
 
 [sub_resource type="Sky" id="Sky_1nn4o"]
 
@@ -22,40 +21,17 @@ fog_light_color = Color(0, 0, 0, 1)
 environment = SubResource("Environment_o8bgs")
 
 [node name="Santa" parent="." instance=ExtResource("1_1wato")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.940894, 0, 0)
+transform = Transform3D(-0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, -1.05911, 0, -1.5)
 
-[node name="HallGrid" parent="." instance=ExtResource("2_afpuh")]
-data = {
-"cells": PackedInt32Array(65535, 65535, 1376257, 65535, 0, 1376257, 0, 0, 393216, 0, 65535, 393216, 1, 65535, 393217, 2, 65535, 393217, 1, 0, 786433, 4, 0, 786433, 6, 65531, 393218, 5, 65531, 393217, 4, 65531, 393217, 3, 65531, 393217, 0, 65531, 393217, 65535, 65531, 1376258, 65535, 65532, 1376257, 65535, 65533, 1376257, 65535, 65534, 1376257, 1, 65532, 786433, 3, 65532, 786433, 4, 65532, 786433, 6, 65532, 1114113, 6, 65533, 1114113, 6, 65534, 1114113, 6, 65535, 786432, 6, 0, 786432, 6, 1, 1114113, 6, 2, 1114113, 4, 3, 393217, 3, 3, 393217, 2, 3, 393217, 1, 3, 393217, 0, 2, 1114113, 0, 1, 1114113, 0, 65534, 1114113, 0, 65533, 1114113, 5, 65533, 1376257, 5, 65534, 1376257, 5, 1, 1376257, 5, 2, 1376257, 1, 4, 786433, 2, 4, 786433, 3, 4, 786433, 4, 4, 786433, 5, 4, 786433, 6, 3, 1114113, 65535, 1, 1376257, 65535, 2, 1376257, 65535, 3, 1376257, 0, 4, 786433, 5, 65532, 1376256, 0, 65532, 1376256, 5, 65535, 1376256, 5, 0, 1376256, 5, 3, 1376256, 0, 3, 1376256, 6, 4, 1114114, 65535, 4, 786434, 2, 0, 786433, 3, 0, 786433, 3, 65535, 393217, 4, 65535, 393217, 2, 65532, 786433, 2, 65531, 393217, 1, 65531, 393217, 7, 65535, 393217, 7, 0, 786433)
-}
-metadata/_edit_lock_ = true
+[node name="Level01" parent="." instance=ExtResource("2_xwwfo")]
 
-[node name="Chimney" parent="." instance=ExtResource("3_nyot4")]
-transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -0.582038, -0.159, 0)
+[node name="Door" parent="." instance=ExtResource("3_8qf26")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1, 0, 3.5)
 
-[node name="CeilingLight" parent="." instance=ExtResource("4_rn7cb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
+[node name="Door2" parent="." instance=ExtResource("3_8qf26")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.5)
 
-[node name="CeilingLight8" parent="." instance=ExtResource("4_rn7cb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+[node name="Door3" parent="." instance=ExtResource("3_8qf26")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.5)
 
-[node name="CeilingLight3" parent="." instance=ExtResource("4_rn7cb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -4)
-
-[node name="CeilingLight2" parent="." instance=ExtResource("4_rn7cb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
-
-[node name="CeilingLight4" parent="." instance=ExtResource("4_rn7cb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -5)
-
-[node name="CeilingLight5" parent="." instance=ExtResource("4_rn7cb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, -5)
-
-[node name="CeilingLight6" parent="." instance=ExtResource("4_rn7cb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -8)
-
-[node name="CeilingLight7" parent="." instance=ExtResource("4_rn7cb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, -8)
-
-[node name="SampleRoom" parent="." instance=ExtResource("5_ekc7y")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
+[node name="CeilingLight" parent="." instance=ExtResource("4_kch46")]

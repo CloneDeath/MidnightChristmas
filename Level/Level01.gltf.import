@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b1kweldyfifda"
-path="res://.godot/imported/SampleRoom.gltf-db9f3cd401a73e1512ea4754a72688ad.scn"
+uid="uid://kg0ab8j66l8m"
+path="res://.godot/imported/Level01.gltf-30470889f077027802b5f5055db9c5a0.scn"
 
 [deps]
 
-source_file="res://House2/SampleRoom.gltf"
-dest_files=["res://.godot/imported/SampleRoom.gltf-db9f3cd401a73e1512ea4754a72688ad.scn"]
+source_file="res://Level/Level01.gltf"
+dest_files=["res://.godot/imported/Level01.gltf-30470889f077027802b5f5055db9c5a0.scn"]
 
 [params]
 
@@ -30,7 +30,7 @@ _subresources={
 "materials": {
 "material_0": {
 "use_external/enabled": true,
-"use_external/path": "res://House/Parts/Ceiling.material"
+"use_external/path": "res://House/Parts/Floor.material"
 },
 "material_1": {
 "use_external/enabled": true,
@@ -38,7 +38,7 @@ _subresources={
 },
 "material_2": {
 "use_external/enabled": true,
-"use_external/path": "res://House/Parts/Floor.material"
+"use_external/path": "res://House/Parts/Ceiling.material"
 }
 },
 "nodes": {
