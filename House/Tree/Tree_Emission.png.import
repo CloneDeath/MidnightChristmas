@@ -3,27 +3,25 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c6p4w5cncth4g"
-path.s3tc="res://.godot/imported/Tree_Emission.png-f298441463fb38faaff14d46fc5fdbd0.s3tc.ctex"
-path.etc2="res://.godot/imported/Tree_Emission.png-f298441463fb38faaff14d46fc5fdbd0.etc2.ctex"
+path="res://.godot/imported/Tree_Emission.png-f298441463fb38faaff14d46fc5fdbd0.ctex"
 metadata={
-"imported_formats": ["s3tc", "etc2"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://House/Tree/Tree_Emission.png"
-dest_files=["res://.godot/imported/Tree_Emission.png-f298441463fb38faaff14d46fc5fdbd0.s3tc.ctex", "res://.godot/imported/Tree_Emission.png-f298441463fb38faaff14d46fc5fdbd0.etc2.ctex"]
+dest_files=["res://.godot/imported/Tree_Emission.png-f298441463fb38faaff14d46fc5fdbd0.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/bptc_ldr=0
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""

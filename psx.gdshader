@@ -48,6 +48,6 @@ void fragment() {
 	ALBEDO = texture(albedo, uv).rgb;
 	ALPHA = texture(albedo, uv).a;
 	ALPHA_SCISSOR_THRESHOLD = alpha_scissor;
-	EMISSION = texture(emission, uv).rgb;
+	EMISSION = texture(emission, uv).rgb * texture(emission, uv).a;
 	SPECULAR = texture(specular, uv).r;
 }

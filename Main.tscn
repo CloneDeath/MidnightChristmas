@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://kg0ab8j66l8m" path="res://Level/Level01.gltf" id="2_xwwfo"]
 [ext_resource type="PackedScene" uid="uid://0oby2b7b86ls" path="res://House/Door/Door.gltf" id="3_8qf26"]
 [ext_resource type="PackedScene" uid="uid://bgblilimjvhuo" path="res://House/Lights/CeilingLight.tscn" id="4_kch46"]
-[ext_resource type="PackedScene" uid="uid://ddn3v3opu8o67" path="res://House/Tree/Tree.gltf" id="5_s7f2f"]
+[ext_resource type="PackedScene" uid="uid://coo6adibwqk4s" path="res://House/Tree/Tree.gltf" id="5_s7f2f"]
 [ext_resource type="PackedScene" uid="uid://bqhjx5fqytkt2" path="res://House/Chimney/Chimney.gltf" id="6_dml30"]
 
 [sub_resource type="Sky" id="Sky_1nn4o"]

@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://ddn3v3opu8o67"
+uid="uid://coo6adibwqk4s"
 path="res://.godot/imported/Tree.gltf-1bcf9a6c99cbaed2d4c7bb3123a5fe1e.scn"
 
 [deps]
@@ -28,6 +28,10 @@ animation/fps=30
 import_script/path=""
 _subresources={
 "materials": {
+"Star": {
+"use_external/enabled": true,
+"use_external/path": "res://House/Tree/Star.material"
+},
 "Tree": {
 "use_external/enabled": true,
 "use_external/path": "res://House/Tree/Tree.material"
