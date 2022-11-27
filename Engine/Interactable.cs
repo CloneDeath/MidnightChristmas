@@ -13,9 +13,10 @@ public partial class Interactable : Area3D {
 		base._Process(delta);
 
 		var interaction = GetTree().GetFirstNodeInGroup("interaction");
-		InteractUI.Visible = OverlapsArea(interaction) && Enabled;
+		var isLookedAt = OverlapsArea(interaction);
+		InteractUI.Visible = isLookedAt && Enabled;
 
-		if (Enabled && Input.IsActionJustPressed("interact")) {
+		if (isLookedAt && Input.IsActionJustPressed("interact") && Enabled) {
 			EmitSignal("Interacted");
 		}
 	}
