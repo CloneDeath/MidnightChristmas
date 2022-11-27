@@ -11,6 +11,7 @@ height = 1.7
 
 [node name="Santa" type="CharacterBody3D"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+collision_layer = 3
 script = ExtResource("1_7r2ek")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
@@ -29,3 +30,16 @@ Enabled = false
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Interaction"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 1.5, 0)
 shape = SubResource("SeparationRayShape3D_gghec")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="CookieCount" type="Label" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_right = -4.0
+offset_bottom = 26.0
+grow_horizontal = 0
+text = "0"
+horizontal_alignment = 2

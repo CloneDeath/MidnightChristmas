@@ -1,5 +1,6 @@
 using System;
 using Godot;
+using MidnightChristmas.House.Cookie;
 
 namespace MidnightChristmas; 
 
@@ -14,6 +15,14 @@ public partial class Santa : CharacterBody3D
 	public bool IsTurningAround => TurnAroundTime <= TimeToTurnAround;
 	public double TurnAroundTime = TimeToTurnAround + 1;
 	public double TurnAroundDirection = 1;
+
+	private Label CookieCount => GetNode<Label>("CanvasLayer/CookieCount");
+
+	public override void _Process(double delta) {
+		base._Process(delta);
+
+		CookieCount.Text = Cookie.Count.ToString();
+	}
 
 	public override void _PhysicsProcess(double delta) {
 		TurnAroundTime += delta;
