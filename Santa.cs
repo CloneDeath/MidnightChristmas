@@ -1,3 +1,4 @@
+using System;
 using Godot;
 
 namespace MidnightChristmas; 
@@ -6,26 +7,49 @@ public partial class Santa : CharacterBody3D
 {
 	public const float Speed = 1.0f;
 	public const float JumpVelocity = 4.5f;
+	public const double TimeToTurnAround = 0.5f;
 
-	public float gravity = ProjectSettings.GetSetting("physics/3d/default_gravity").AsSingle();
+	public static float Gravity => ProjectSettings.GetSetting("physics/3d/default_gravity").AsSingle();
 
-	public override void _PhysicsProcess(double delta)
-	{
+	public bool IsTurningAround => TurnAroundTime <= TimeToTurnAround;
+	public double TurnAroundTime = TimeToTurnAround + 1;
+	public double TurnAroundDirection = 1;
+
+	public override void _PhysicsProcess(double delta) {
+		TurnAroundTime += delta;
+		if (!IsTurningAround && Input.IsActionJustPressed("turn_around")) {
+			TurnAroundTime = 0;
+			TurnAroundDirection *= -1;
+		}
+		if (IsTurningAround) RotateY((float)(TurnAroundDirection * delta * Mathf.Pi / TimeToTurnAround));
+		
+		ProcessInputs(delta);
+	}
+
+	private void ProcessInputs(double delta) {
 		var velocity = Velocity;
 
-		//velocity = AddGravity(delta, velocity);
-		//velocity = HandleJump(velocity);
-		velocity = HandleInput(velocity);
+		velocity = AddGravity(delta, velocity);
+		if (!IsTurningAround) velocity = HandleJump(velocity);
+		if (!IsTurningAround) velocity = HandleInput(velocity);
 
 		Velocity = velocity;
 		MoveAndSlide();
-		
+
 		var rotation = Input.GetAxis("look_right", "look_left") * delta;
-		RotateY((float)rotation);
+		if (!IsTurningAround) {
+			if (Math.Abs(rotation) > 0) TurnAroundDirection = Math.Sign(rotation);
+			RotateY((float)rotation);
+		}
 	}
 
 	private Vector3 AddGravity(double delta, Vector3 velocity) {
-		if (!IsOnFloor()) velocity.y -= gravity * (float)delta;
+		if (!IsOnFloor()) velocity.y -= Gravity * (float)delta;
+		return velocity;
+	}
+
+	private Vector3 HandleJump(Vector3 velocity) {
+		if (Input.IsActionJustPressed("move_jump") && IsOnFloor()) velocity.y = JumpVelocity;
 		return velocity;
 	}
 
@@ -41,11 +65,6 @@ public partial class Santa : CharacterBody3D
 			velocity.z = Mathf.MoveToward(Velocity.z, 0, Speed);
 		}
 
-		return velocity;
-	}
-
-	private Vector3 HandleJump(Vector3 velocity) {
-		if (Input.IsActionJustPressed("ui_accept") && IsOnFloor()) velocity.y = JumpVelocity;
 		return velocity;
 	}
 }

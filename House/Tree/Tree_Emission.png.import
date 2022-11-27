@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://q135wubacdmr"
-path.s3tc="res://.godot/imported/White.png-e2be878eece7dc37de09442677653512.s3tc.ctex"
-path.etc2="res://.godot/imported/White.png-e2be878eece7dc37de09442677653512.etc2.ctex"
+uid="uid://c6p4w5cncth4g"
+path.s3tc="res://.godot/imported/Tree_Emission.png-f298441463fb38faaff14d46fc5fdbd0.s3tc.ctex"
+path.etc2="res://.godot/imported/Tree_Emission.png-f298441463fb38faaff14d46fc5fdbd0.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc", "etc2"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://House/Lights/White.png"
-dest_files=["res://.godot/imported/White.png-e2be878eece7dc37de09442677653512.s3tc.ctex", "res://.godot/imported/White.png-e2be878eece7dc37de09442677653512.etc2.ctex"]
+source_file="res://House/Tree/Tree_Emission.png"
+dest_files=["res://.godot/imported/Tree_Emission.png-f298441463fb38faaff14d46fc5fdbd0.s3tc.ctex", "res://.godot/imported/Tree_Emission.png-f298441463fb38faaff14d46fc5fdbd0.etc2.ctex"]
 
 [params]
 

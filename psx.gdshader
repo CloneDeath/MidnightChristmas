@@ -13,25 +13,29 @@ uniform bool affine_texture_mapping = true;
 uniform float alpha_scissor: hint_range(0.0, 1.0) = 1.0;
 
 void vertex() {
-	VERTEX = (MODELVIEW_MATRIX * vec4(VERTEX, 1.0)).xyz;
-	
-	float z_orig = VERTEX.z;
-	float i = (1.0 - jitter) * min(VIEWPORT_SIZE.x, VIEWPORT_SIZE.y) / 2.0;
+	vec3 vertex = (MODELVIEW_MATRIX * vec4(VERTEX, 1.0)).xyz;
+
+	float z_orig = vertex.z;
+	//float i = (1.0 - jitter) * min(VIEWPORT_SIZE.x, VIEWPORT_SIZE.y) / 2.0;
+	//float i = 100.0;
+	float i = (1.0 - jitter) * max(min(VIEWPORT_SIZE.x, VIEWPORT_SIZE.y), 128) / 2.0;
 	
 	if (jitter_depth_independent) {
-		float w = (PROJECTION_MATRIX * vec4(VERTEX, 1.0)).w;
-		VERTEX = round(VERTEX / w * i) / i * w;
+		float w = (PROJECTION_MATRIX * vec4(vertex, 1.0)).w;
+		vertex = round(vertex / w * i) / i * w;
 	} else {
-		VERTEX = round(VERTEX * i) / i;
+		vertex = round(vertex * i) / i;
 	}
 	
 	if (!jitter_z_coordinate) {
-		VERTEX.z = z_orig;
+		vertex.z = z_orig;
 	}
 
 	if (affine_texture_mapping) {
-		UV *= VERTEX.z;
+		UV *= vertex.z;
 	}
+	
+	VERTEX = vertex;
 }
 
 void fragment() {

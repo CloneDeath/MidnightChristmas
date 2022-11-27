@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dsp4vw0awxct3"]
+[gd_scene load_steps=8 format=3 uid="uid://dsp4vw0awxct3"]
 
 [ext_resource type="PackedScene" uid="uid://vmuo67dwpmp2" path="res://Santa.tscn" id="1_1wato"]
 [ext_resource type="PackedScene" uid="uid://kg0ab8j66l8m" path="res://Level/Level01.gltf" id="2_xwwfo"]
 [ext_resource type="PackedScene" uid="uid://0oby2b7b86ls" path="res://House/Door/Door.gltf" id="3_8qf26"]
 [ext_resource type="PackedScene" uid="uid://bgblilimjvhuo" path="res://House/Lights/CeilingLight.tscn" id="4_kch46"]
+[ext_resource type="PackedScene" uid="uid://r7k2b5smbt5r" path="res://House/Tree/Tree.gltf" id="5_s7f2f"]
 
 [sub_resource type="Sky" id="Sky_1nn4o"]
 
@@ -12,7 +13,7 @@ background_mode = 1
 sky = SubResource("Sky_1nn4o")
 ambient_light_source = 2
 ambient_light_color = Color(1, 1, 1, 1)
-ambient_light_energy = 0.01
+ambient_light_energy = 0.0
 fog_light_color = Color(0, 0, 0, 1)
 
 [node name="Main" type="Node3D"]
@@ -35,3 +36,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.5)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.5)
 
 [node name="CeilingLight" parent="." instance=ExtResource("4_kch46")]
+
+[node name="Tree" parent="." instance=ExtResource("5_s7f2f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)

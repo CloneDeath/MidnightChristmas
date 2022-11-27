@@ -20,3 +20,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 
 [node name="LightEnabler" type="Node3D" parent="."]
 script = ExtResource("2_cqwnu")
+Enabled = false

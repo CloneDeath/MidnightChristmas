@@ -4,8 +4,9 @@ using Godot;
 
 namespace MidnightChristmas; 
 
-public partial class LightEnabler : Node3D
-{
+public partial class LightEnabler : Node3D {
+	[Export] public bool Enabled { get; set; } = true;
+	
 	public override void _Process(double delta) {
 		var lights = GetLightsInScene()
 			.OrderBy(l => l.GlobalPosition.DistanceTo(GlobalPosition))
@@ -19,7 +20,7 @@ public partial class LightEnabler : Node3D
 
 		var lightsOff = lights.Skip(max_lights);
 		foreach (var light in lightsOff) {
-			light.Visible = false;
+			light.Visible = !Enabled;
 		}
 	}
 

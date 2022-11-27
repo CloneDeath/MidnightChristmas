@@ -2,21 +2,21 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bn5x5f7tsqw7l"
-path="res://.godot/imported/Door.png-b9713d858911be7a66942df301c31153.ctex"
+uid="uid://cjj4k3e6nyc6w"
+path="res://.godot/imported/Tree.png-b68f35df0d16e035cc13c023cdd1d84f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://House/Door/Door.png"
-dest_files=["res://.godot/imported/Door.png-b9713d858911be7a66942df301c31153.ctex"]
+source_file="res://House/Tree/Tree.png"
+dest_files=["res://.godot/imported/Tree.png-b68f35df0d16e035cc13c023cdd1d84f.ctex"]
 
 [params]
 
-compress/mode=1
-compress/lossy_quality=0.8
+compress/mode=0
+compress/lossy_quality=0.75
 compress/hdr_compression=1
 compress/bptc_ldr=0
 compress/normal_map=0
