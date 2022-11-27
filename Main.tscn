@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://dsp4vw0awxct3"]
+[gd_scene load_steps=10 format=3 uid="uid://dsp4vw0awxct3"]
 
 [ext_resource type="PackedScene" uid="uid://vmuo67dwpmp2" path="res://Santa.tscn" id="1_1wato"]
 [ext_resource type="PackedScene" uid="uid://kg0ab8j66l8m" path="res://Level/Level01.gltf" id="2_xwwfo"]
 [ext_resource type="PackedScene" uid="uid://0oby2b7b86ls" path="res://House/Door/Door.gltf" id="3_8qf26"]
 [ext_resource type="PackedScene" uid="uid://bgblilimjvhuo" path="res://House/Lights/CeilingLight.tscn" id="4_kch46"]
-[ext_resource type="PackedScene" uid="uid://bqhjx5fqytkt2" path="res://House/Chimney/Chimney.gltf" id="6_dml30"]
+[ext_resource type="PackedScene" uid="uid://bx2s5guecdwn2" path="res://House/Chimney/Chimney.gltf" id="6_dml30"]
+[ext_resource type="PackedScene" uid="uid://clb7mu7og3nnr" path="res://House/Cookie/Cookie.tscn" id="7_k14gh"]
 [ext_resource type="PackedScene" uid="uid://08qa4f0mxxoj" path="res://House/Tree/Tree.tscn" id="7_u88ew"]
 
 [sub_resource type="Sky" id="Sky_1nn4o"]
@@ -46,3 +47,6 @@ transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 
 
 [node name="Tree" parent="Level01" instance=ExtResource("7_u88ew")]
 transform = Transform3D(-0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, 1, 0, -1)
+
+[node name="Cookie" parent="Level01" instance=ExtResource("7_k14gh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 1.5)
