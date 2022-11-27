@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://dsp4vw0awxct3"]
+[gd_scene load_steps=9 format=3 uid="uid://dsp4vw0awxct3"]
 
 [ext_resource type="PackedScene" uid="uid://vmuo67dwpmp2" path="res://Santa.tscn" id="1_1wato"]
 [ext_resource type="PackedScene" uid="uid://kg0ab8j66l8m" path="res://Level/Level01.gltf" id="2_xwwfo"]
 [ext_resource type="PackedScene" uid="uid://0oby2b7b86ls" path="res://House/Door/Door.gltf" id="3_8qf26"]
 [ext_resource type="PackedScene" uid="uid://bgblilimjvhuo" path="res://House/Lights/CeilingLight.tscn" id="4_kch46"]
-[ext_resource type="PackedScene" uid="uid://r7k2b5smbt5r" path="res://House/Tree/Tree.gltf" id="5_s7f2f"]
+[ext_resource type="PackedScene" uid="uid://ddn3v3opu8o67" path="res://House/Tree/Tree.gltf" id="5_s7f2f"]
+[ext_resource type="PackedScene" uid="uid://bqhjx5fqytkt2" path="res://House/Chimney/Chimney.gltf" id="6_dml30"]
 
 [sub_resource type="Sky" id="Sky_1nn4o"]
 
@@ -22,20 +23,26 @@ fog_light_color = Color(0, 0, 0, 1)
 environment = SubResource("Environment_o8bgs")
 
 [node name="Santa" parent="." instance=ExtResource("1_1wato")]
-transform = Transform3D(-0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, -1.05911, 0, -1.5)
+transform = Transform3D(-0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, -0.55911, 0, -0.5)
 
 [node name="Level01" parent="." instance=ExtResource("2_xwwfo")]
 
-[node name="Door" parent="." instance=ExtResource("3_8qf26")]
+[node name="Door" parent="Level01" instance=ExtResource("3_8qf26")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1, 0, 3.5)
 
-[node name="Door2" parent="." instance=ExtResource("3_8qf26")]
+[node name="Door2" parent="Level01" instance=ExtResource("3_8qf26")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.5)
 
-[node name="Door3" parent="." instance=ExtResource("3_8qf26")]
+[node name="Door3" parent="Level01" instance=ExtResource("3_8qf26")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.5)
 
-[node name="CeilingLight" parent="." instance=ExtResource("4_kch46")]
+[node name="Door4" parent="Level01" instance=ExtResource("3_8qf26")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 1)
 
-[node name="Tree" parent="." instance=ExtResource("5_s7f2f")]
+[node name="CeilingLight" parent="Level01" instance=ExtResource("4_kch46")]
+
+[node name="Tree" parent="Level01" instance=ExtResource("5_s7f2f")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+
+[node name="Chimney" parent="Level01" instance=ExtResource("6_dml30")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -1.5, 0, -1.5)

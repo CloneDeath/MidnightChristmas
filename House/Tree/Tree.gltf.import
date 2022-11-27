@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://r7k2b5smbt5r"
+uid="uid://ddn3v3opu8o67"
 path="res://.godot/imported/Tree.gltf-1bcf9a6c99cbaed2d4c7bb3123a5fe1e.scn"
 
 [deps]
@@ -43,6 +43,16 @@ _subresources={
 "save_to_file/enabled": false,
 "save_to_file/make_streamable": "",
 "save_to_file/path": ""
+}
+},
+"nodes": {
+"PATH:Cone": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:Cylinder": {
+"generate/physics": true,
+"physics/shape_type": 1
 }
 }
 }
